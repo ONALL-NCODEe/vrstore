@@ -53,7 +53,7 @@ const updateProductDetails = asyncHandler(async (req, res) => {
         }
 
         const product = await Product.findByIdAndUpdate(
-            req.params.id,
+            req.params.id, // Thêm _id nếu lỗi
             { ...req.fields },
             { new: true }
         );
@@ -116,7 +116,7 @@ const fetchProductById = asyncHandler(async (req, res) => {
     }
 });
 
-const fetchAllProduct = asyncHandler(async (req, res) => {
+const fetchAllProducts = asyncHandler(async (req, res) => {
     try {
         const products = await Product.find({})
             .populate("category")
@@ -197,7 +197,7 @@ export {
     removeProduct,
     fetchProducts,
     fetchProductById,
-    fetchAllProduct,
+    fetchAllProducts,
     addProductReview,
     fetchTopProducts,
     fetchNewProducts,

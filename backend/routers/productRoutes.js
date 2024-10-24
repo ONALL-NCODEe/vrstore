@@ -9,7 +9,7 @@ import {
     removeProduct,
     fetchProducts,
     fetchProductById,
-    fetchAllProduct,
+    fetchAllProducts,
     addProductReview,
     fetchTopProducts,
     fetchNewProducts,
@@ -22,7 +22,7 @@ router
     .get(fetchProducts)
     .post(authenticate, authorizeAdmin, formidable(), addProduct);
 
-router.route("/allproducts").get(fetchAllProduct);
+router.route("/allproducts").get(fetchAllProducts);
 router
     .route("/:id/reviews")
     .post(authenticate, authorizeAdmin, checkId, addProductReview);
