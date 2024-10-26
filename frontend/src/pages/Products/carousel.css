@@ -1,0 +1,23 @@
+/* carousel.css */
+
+.slick-prev,
+.slick-next {
+    background-color: black; /* Màu nền đen */
+    color: white; /* Màu chữ trắng */
+    border-radius: 50%; /* Đường viền tròn */
+
+    z-index: 100; /* Đảm bảo nút nằm trên các phần tử khác */
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: white; /* Màu của biểu tượng mũi tên */
+}
+
+/* .slick-prev {
+    left: 10px; 
+}
+
+.slick-next {
+    right: 10px; 
+} */
