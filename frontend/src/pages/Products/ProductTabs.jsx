@@ -28,7 +28,7 @@ const ProductTabs = ({
     };
 
     return (
-        <div className="flex flex-col md:flex-row">
+        <div className="flex flex-col md:flex-row bg-white">
             <section className="mr-[5rem]">
                 <div
                     className={`flex-1 p-4 cursor-pointer text-lg ${
@@ -139,7 +139,7 @@ const ProductTabs = ({
                             {product.reviews.map((review) => (
                                 <div
                                     key={review._id}
-                                    className="bg-[1A1A1A] p-4 rounded-lg xl:ml-[2rem] sm:ml-[0rem] 
+                                    className="bg-[1A1A1A] p-4 rounded-lg xl:ml-[2rem] sm:ml-[0rem]
                                     xl:w-[50rem] sm:w-[24rem] mb-5"
                                 >
                                     <div className="flex justify-between">
